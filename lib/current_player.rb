@@ -1,6 +1,6 @@
 def input_to_index(input)
   input.to_i - 1
-end 
+end
 
 #if index is valid...
 def valid_move?(number_entered, board)
@@ -12,7 +12,7 @@ def move(array, index, name = "X")
 end
 #if index is valid...show the board
 def position_taken?(board, answer)
-  board[answer] != " " 
+  board[answer] != " "
 end
 
 def display_board(board)
@@ -34,7 +34,7 @@ def turn(board)
     else
       puts "That is an invalid entry!"
       turn(board)
-    end 
+    end
 end
 
 def play(board)
@@ -57,24 +57,24 @@ def turn_count(turn)
     if unit == "X" || unit == "O"
       #puts "spot taken"
       move_count.push(1)
-    #else 
+    #else
       #puts "spot free"
       #counter += 1
-    end 
-  end 
+    end
+  end
   move_count.length.to_i
-end 
- 
+end
+
 def current_player(board)
   #if turn_count(board) %  == 0
     num = turn_count(board)
     if num % 2 == 0
       return "X"
     else
-      return "O" 
+      return "O"
     #puts "divisible by 2"
-    end 
-end 
+    end
+end
 #else ask for input again until you get valid input
 #_________________________________________________
 
